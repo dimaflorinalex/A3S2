@@ -1,0 +1,21 @@
+﻿@page "{stireId:int}"
+@model StireModel
+@{
+    ViewData["Title"] = "Stire";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div>
+    <p><a asp-page="Index">Inapoi la pagina principala</a></p>
+
+    <div class="mt-5 stire">
+        <h2 class="stire__titlu">@Model.Stire!.Titlu (Id: @Model.Stire.Id)</h2>
+        <p>Lead: @Model.Stire.Lead</p>
+        <p>@Model.Stire.Continut</p>
+        <p class="stire__metadata">Adăugat de de @Model.Stire.Autor, la data de @Model.Stire.Data.ToLocalTime() în categoria @Model.Stire.Categorie?.Nume (Id: @Model.Stire.CategorieId)</p>
+    </div>
+</div>
