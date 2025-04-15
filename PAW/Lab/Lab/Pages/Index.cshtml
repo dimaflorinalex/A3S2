@@ -17,6 +17,7 @@
             <p>Lead: @item.Lead</p>
             <p>@item.Continut</p>
             <p class="stire__metadata">Adăugat de de @item.Autor, la data de @item.Data.ToLocalTime() în categoria @item.Categorie?.Nume (Id: @item.CategorieId)</p>
+            <a asp-page="EditeazaStire" asp-route-stireId="@item.Id">Editeaza</a> / <a asp-page="StergereStire" asp-route-stireId="@item.Id">Sterge</a>
         </div>
     }
 </div>

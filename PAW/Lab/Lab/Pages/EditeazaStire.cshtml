@@ -1,0 +1,46 @@
+﻿@page "{stireId:int}"
+@model EditeazaStireModel
+@{
+    ViewData["Title"] = "Editeaza stire";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="row">
+    <div class="row">
+    <p><a asp-page="Index">Inapoi la pagina principala</a></p>
+    </div>
+
+    <div class="row">
+        <form method="post">
+            <input name="id" asp-for="Stire!.Id" hidden />
+
+            <div class="row">
+                <label for="titlu">Titlu:</label><input name="titlu" asp-for="Stire!.Titlu" />
+            </div>
+
+            <div class="row">
+                <label for="autor">Autor:</label><input name="autor" asp-for="Stire!.Autor" />
+            </div>
+
+            <div class="row">
+                <label for="lead">Lead:</label><input name="lead" asp-for="Stire!.Lead" />
+            </div>
+
+            <div class="row">
+                <label for="continut">Continut:</label><input name="continut" asp-for="Stire!.Continut" />
+            </div>
+            
+            <div class="row">
+                <label for="categorieId">CategorieId:</label><input name="categorieId" asp-for="Stire!.CategorieId" />
+            </div>
+            
+            <div class="row">
+                <input type="submit" />
+            </div>
+        </form>
+    </div>
+</div>
